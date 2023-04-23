@@ -1,15 +1,15 @@
 package Task2_4;
 
 public class Device {
-    private boolean booleanValue = true;
     String manufacture, serialNumber;
     float price;
-
+    private boolean booleanValue = true;
     private  float floatValue = price;
     private double doubleValue = 9873234.123;
     private byte[] arrayValue = {1, 2, 3, 4};
     private long longValue = 1231234422L;
     private char charValue = 'd';
+
     public Device(String manufacture,String serialNumber, float price){
         this.manufacture = manufacture;
         this.serialNumber = serialNumber;
@@ -134,6 +134,11 @@ class EthernetAdapter{
     public EthernetAdapter(int speed, String mac){
         this.mac = mac;
         this.speed = speed;
+    }
+
+    @Override
+    public String toString() {
+        return " speed=" + speed + ", mac='" + mac;
     }
 
     public int getSpeed() {
