@@ -49,7 +49,7 @@ public class Animal implements Animals{
         String tail;
         if (this.tail) tail = "Yes";
         else tail = "No";
-        return "Name: " + this.name + "Age: " + this.age + "Tail: " + tail + super.toString();
+        return "Name: " + this.name + " Age: " + this.age + " Tail: " + tail;
     }
 
 }

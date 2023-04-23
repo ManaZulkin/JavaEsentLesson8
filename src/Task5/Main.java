@@ -6,9 +6,10 @@ public class Main {
     public static void main(String[] args) {
         Animal[] animals = new Animal[3];
         input(animals);
-        System.out.println("Users hash codes for animals:");
+        userToString(animals);
+        System.out.println("\nUsers hash codes for animals:");
         userHashCode(animals);
-        System.out.println("Users equals result:");
+        System.out.println("\nUsers equals result:");
         compare(animals);
     }
 
@@ -28,6 +29,11 @@ public class Main {
             if (Tail.equals("yes")) tail = true;
             else  tail = false;
             animals[i] = new Animal(name, age, tail);
+        }
+    }
+    public static void userToString(Animal[] animals){
+        for (int i = 0; i < animals.length; i++){
+            System.out.println((i + 1) + ". " + animals[i].toString());
         }
     }
     public static void userHashCode(Animal[] animals){
